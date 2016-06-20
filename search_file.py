@@ -1,6 +1,7 @@
 #!coding=gbk
 
 import os
+import glob
 
 def search_file(keyword, where):
     '''根据关键字查找某路径下是否有某文件，并打印文件路径'''
@@ -14,6 +15,7 @@ def search_file(keyword, where):
                 continue
             search_file(keyword,os.path.join(where, d))
 
-
 if __name__ == '__main__':
     search_file(r'开发','f:\\')
+
+    print glob.glob('f:\\*\*pdf')
